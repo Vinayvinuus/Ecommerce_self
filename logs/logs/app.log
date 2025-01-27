@@ -1,0 +1,15 @@
+[2025-01-27T13:50:32.833] [INFO] default - Application starting up { nodeEnv: undefined, port: 3050 }
+[2025-01-27T13:50:32.844] [INFO] default - Server started successfully { port: 3050, environment: undefined }
+[2025-01-27T13:52:47.891] [INFO] default - API route accessed { path: '/userlogin', method: 'GET', query: {}, body: [] }
+[2025-01-27T13:53:01.277] [INFO] default - API route accessed {
+  path: '/userlogin',
+  method: 'POST',
+  query: {},
+  body: [ 'Email', 'Password' ]
+}
+[2025-01-27T13:54:10.998] [INFO] default - API route accessed {
+  path: '/getOrdersByCustomerId/1',
+  method: 'GET',
+  query: {},
+  body: []
+}

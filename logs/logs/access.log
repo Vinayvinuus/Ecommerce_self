@@ -1,0 +1,24 @@
+[2025-01-27T13:52:47.903] [INFO] access - Request completed {
+  method: 'GET',
+  path: '/userlogin',
+  status: 403,
+  duration: '12ms',
+  ip: '::ffff:127.0.0.1',
+  userId: 'anonymous'
+}
+[2025-01-27T13:53:02.631] [INFO] access - Request completed {
+  method: 'POST',
+  path: '/userlogin',
+  status: 200,
+  duration: '1354ms',
+  ip: '::ffff:127.0.0.1',
+  userId: 'anonymous'
+}
+[2025-01-27T13:54:11.011] [INFO] access - Request completed {
+  method: 'GET',
+  path: '/getOrdersByCustomerId/1',
+  status: 403,
+  duration: '12ms',
+  ip: '::ffff:127.0.0.1',
+  userId: 'anonymous'
+}

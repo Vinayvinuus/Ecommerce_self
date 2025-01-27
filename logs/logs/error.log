@@ -1,0 +1,756 @@
+[2025-01-20T14:18:42.646] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Store.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeForeignKeyConstraintError',
+    parent: error: insert or update on table "Store" violates foreign key constraint "Store_StateID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 242,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (StateID)=(1) is not present in table "State".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Store',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Store_StateID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Store" ALTER COLUMN "StateID" SET NOT NULL;ALTER TABLE "Store"  ADD FOREIGN KEY ("StateID") REFERENCES "State" ("StateID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: insert or update on table "Store" violates foreign key constraint "Store_StateID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 242,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (StateID)=(1) is not present in table "State".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Store',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Store_StateID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Store" ALTER COLUMN "StateID" SET NOT NULL;ALTER TABLE "Store"  ADD FOREIGN KEY ("StateID") REFERENCES "State" ("StateID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "Store" ALTER COLUMN "StateID" SET NOT NULL;ALTER TABLE "Store"  ADD FOREIGN KEY ("StateID") REFERENCES "State" ("StateID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+    parameters: {},
+    table: 'Store',
+    fields: null,
+    value: undefined,
+    index: 'Store_StateID_fkey',
+    reltype: undefined
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async Store.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-20T14:21:53.763] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async PostgresQueryInterface.addColumn (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/abstract/query-interface.js:184:12)
+      at async Address.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:958:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeDatabaseError',
+    parent: error: column "CustomerID" of relation "Address" contains null values
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 154,
+      severity: 'ERROR',
+      code: '23502',
+      detail: undefined,
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Address',
+      column: 'CustomerID',
+      dataType: undefined,
+      constraint: undefined,
+      file: 'tablecmds.c',
+      line: '6088',
+      routine: 'ATRewriteTable',
+      sql: 'ALTER TABLE "public"."Address" ADD COLUMN "CustomerID" INTEGER NOT NULL REFERENCES "Customer" ("CustomerID") ON DELETE SET NULL ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: column "CustomerID" of relation "Address" contains null values
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 154,
+      severity: 'ERROR',
+      code: '23502',
+      detail: undefined,
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Address',
+      column: 'CustomerID',
+      dataType: undefined,
+      constraint: undefined,
+      file: 'tablecmds.c',
+      line: '6088',
+      routine: 'ATRewriteTable',
+      sql: 'ALTER TABLE "public"."Address" ADD COLUMN "CustomerID" INTEGER NOT NULL REFERENCES "Customer" ("CustomerID") ON DELETE SET NULL ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "public"."Address" ADD COLUMN "CustomerID" INTEGER NOT NULL REFERENCES "Customer" ("CustomerID") ON DELETE SET NULL ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async PostgresQueryInterface.addColumn (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/abstract/query-interface.js:184:12)\n' +
+    '    at async Address.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:958:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-23T13:00:30.455] [ERROR] error - Unhandled Promise Rejection: {
+  reason: ConnectionError [SequelizeConnectionError]: connect ECONNABORTED 35.213.179.112:10372
+      at Client._connectionCallback (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:145:24)
+      at Client._handleErrorWhileConnecting (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\pg\lib\client.js:326:19)
+      at Client._handleErrorEvent (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\pg\lib\client.js:336:19)
+      at Connection.emit (node:events:519:28)
+      at Socket.reportStreamError (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\pg\lib\connection.js:57:12)
+      at Socket.emit (node:events:519:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    parent: Error: connect ECONNABORTED 35.213.179.112:10372
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4079,
+      code: 'ECONNABORTED',
+      syscall: 'connect',
+      address: '35.213.179.112',
+      port: 10372
+    },
+    original: Error: connect ECONNABORTED 35.213.179.112:10372
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4079,
+      code: 'ECONNABORTED',
+      syscall: 'connect',
+      address: '35.213.179.112',
+      port: 10372
+    }
+  },
+  stack: 'SequelizeConnectionError: connect ECONNABORTED 35.213.179.112:10372\n' +
+    '    at Client._connectionCallback (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:145:24)\n' +
+    '    at Client._handleErrorWhileConnecting (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\pg\\lib\\client.js:326:19)\n' +
+    '    at Client._handleErrorEvent (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\pg\\lib\\client.js:336:19)\n' +
+    '    at Connection.emit (node:events:519:28)\n' +
+    '    at Socket.reportStreamError (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\pg\\lib\\connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:519:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:169:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:128:3)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)'
+}
+[2025-01-23T13:00:30.472] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+      at C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async PostgresQueryInterface.rollbackTransaction (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\dialects\abstract\query-interface.js:565:12)
+      at async Transaction.rollback (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\transaction.js:65:7)
+      at async updateOrderItemStatus (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\Controller\OrderCon.js:419:9) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: read ECONNRESET
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
+        at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4077,
+      code: 'ECONNRESET',
+      syscall: 'read',
+      sql: 'ROLLBACK;',
+      parameters: undefined
+    },
+    original: Error: read ECONNRESET
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
+        at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4077,
+      code: 'ECONNRESET',
+      syscall: 'read',
+      sql: 'ROLLBACK;',
+      parameters: undefined
+    },
+    sql: 'ROLLBACK;',
+    parameters: {}
+  },
+  stack: 'Error\n' +
+    '    at Query.run (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n' +
+    '    at C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async PostgresQueryInterface.rollbackTransaction (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:565:12)\n' +
+    '    at async Transaction.rollback (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\transaction.js:65:7)\n' +
+    '    at async updateOrderItemStatus (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\Controller\\OrderCon.js:419:9)'
+}
+[2025-01-23T13:01:06.608] [ERROR] error - Unhandled Promise Rejection: {
+  reason: ConnectionError [SequelizeConnectionError]: connect ECONNABORTED 35.213.179.112:10372
+      at Client._connectionCallback (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:145:24)
+      at Client._handleErrorWhileConnecting (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\pg\lib\client.js:326:19)
+      at Client._handleErrorEvent (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\pg\lib\client.js:336:19)
+      at Connection.emit (node:events:519:28)
+      at Socket.reportStreamError (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\pg\lib\connection.js:57:12)
+      at Socket.emit (node:events:519:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    parent: Error: connect ECONNABORTED 35.213.179.112:10372
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4079,
+      code: 'ECONNABORTED',
+      syscall: 'connect',
+      address: '35.213.179.112',
+      port: 10372
+    },
+    original: Error: connect ECONNABORTED 35.213.179.112:10372
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4079,
+      code: 'ECONNABORTED',
+      syscall: 'connect',
+      address: '35.213.179.112',
+      port: 10372
+    }
+  },
+  stack: 'SequelizeConnectionError: connect ECONNABORTED 35.213.179.112:10372\n' +
+    '    at Client._connectionCallback (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:145:24)\n' +
+    '    at Client._handleErrorWhileConnecting (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\pg\\lib\\client.js:326:19)\n' +
+    '    at Client._handleErrorEvent (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\pg\\lib\\client.js:336:19)\n' +
+    '    at Connection.emit (node:events:519:28)\n' +
+    '    at Socket.reportStreamError (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\pg\\lib\\connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:519:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:169:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:128:3)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)'
+}
+[2025-01-23T17:37:20.567] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+      at C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async PostgresQueryInterface.showIndex (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\dialects\abstract\query-interface.js:254:12)
+      at async Permissions.sync (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\model.js:988:29)
+      at async Sequelize.sync (C:\Ecom23jan25\Ecommerce-Electro-BackEnd\node_modules\sequelize\lib\sequelize.js:377:9) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: read ECONNRESET
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
+        at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4077,
+      code: 'ECONNRESET',
+      syscall: 'read',
+      sql: "SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Permissions' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;",
+      parameters: undefined
+    },
+    original: Error: read ECONNRESET
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
+        at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -4077,
+      code: 'ECONNRESET',
+      syscall: 'read',
+      sql: "SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Permissions' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;",
+      parameters: undefined
+    },
+    sql: "SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Permissions' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;",
+    parameters: {}
+  },
+  stack: 'Error\n' +
+    '    at Query.run (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n' +
+    '    at C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async PostgresQueryInterface.showIndex (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:254:12)\n' +
+    '    at async Permissions.sync (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\model.js:988:29)\n' +
+    '    at async Sequelize.sync (C:\\Ecom23jan25\\Ecommerce-Electro-BackEnd\\node_modules\\sequelize\\lib\\sequelize.js:377:9)'
+}
+[2025-01-24T15:32:35.260] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async UserManagement.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeForeignKeyConstraintError',
+    parent: error: insert or update on table "UserManagement" violates foreign key constraint "UserManagement_CityID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 274,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (CityID)=(4) is not present in table "City".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'UserManagement',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'UserManagement_CityID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "UserManagement" ALTER COLUMN "CityID" SET NOT NULL;ALTER TABLE "UserManagement"  ADD FOREIGN KEY ("CityID") REFERENCES "City" ("CityID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: insert or update on table "UserManagement" violates foreign key constraint "UserManagement_CityID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 274,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (CityID)=(4) is not present in table "City".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'UserManagement',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'UserManagement_CityID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "UserManagement" ALTER COLUMN "CityID" SET NOT NULL;ALTER TABLE "UserManagement"  ADD FOREIGN KEY ("CityID") REFERENCES "City" ("CityID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "UserManagement" ALTER COLUMN "CityID" SET NOT NULL;ALTER TABLE "UserManagement"  ADD FOREIGN KEY ("CityID") REFERENCES "City" ("CityID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+    parameters: {},
+    table: 'UserManagement',
+    fields: null,
+    value: undefined,
+    index: 'UserManagement_CityID_fkey',
+    reltype: undefined
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserManagement.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-24T15:34:18.898] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async UserManagement.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeForeignKeyConstraintError',
+    parent: error: insert or update on table "UserManagement" violates foreign key constraint "UserManagement_CityID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 274,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (CityID)=(1) is not present in table "City".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'UserManagement',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'UserManagement_CityID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "UserManagement" ALTER COLUMN "CityID" SET NOT NULL;ALTER TABLE "UserManagement"  ADD FOREIGN KEY ("CityID") REFERENCES "City" ("CityID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: insert or update on table "UserManagement" violates foreign key constraint "UserManagement_CityID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 274,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (CityID)=(1) is not present in table "City".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'UserManagement',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'UserManagement_CityID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "UserManagement" ALTER COLUMN "CityID" SET NOT NULL;ALTER TABLE "UserManagement"  ADD FOREIGN KEY ("CityID") REFERENCES "City" ("CityID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "UserManagement" ALTER COLUMN "CityID" SET NOT NULL;ALTER TABLE "UserManagement"  ADD FOREIGN KEY ("CityID") REFERENCES "City" ("CityID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+    parameters: {},
+    table: 'UserManagement',
+    fields: null,
+    value: undefined,
+    index: 'UserManagement_CityID_fkey',
+    reltype: undefined
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserManagement.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-24T15:36:39.061] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Payment.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeForeignKeyConstraintError',
+    parent: error: insert or update on table "Payment" violates foreign key constraint "Payment_OrderID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 251,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (OrderID)=(2) is not present in table "Orders".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Payment',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Payment_OrderID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Payment" ALTER COLUMN "OrderID" SET NOT NULL;ALTER TABLE "Payment"  ADD FOREIGN KEY ("OrderID") REFERENCES "Orders" ("OrderID") ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: insert or update on table "Payment" violates foreign key constraint "Payment_OrderID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 251,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (OrderID)=(2) is not present in table "Orders".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Payment',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Payment_OrderID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Payment" ALTER COLUMN "OrderID" SET NOT NULL;ALTER TABLE "Payment"  ADD FOREIGN KEY ("OrderID") REFERENCES "Orders" ("OrderID") ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "Payment" ALTER COLUMN "OrderID" SET NOT NULL;ALTER TABLE "Payment"  ADD FOREIGN KEY ("OrderID") REFERENCES "Orders" ("OrderID") ON DELETE CASCADE ON UPDATE CASCADE;',
+    parameters: {},
+    table: 'Payment',
+    fields: null,
+    value: undefined,
+    index: 'Payment_OrderID_fkey',
+    reltype: undefined
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async Payment.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-24T15:39:50.968] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Feedback.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeForeignKeyConstraintError',
+    parent: error: insert or update on table "Feedback" violates foreign key constraint "Feedback_OrderID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (OrderID)=(27) is not present in table "Orders".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Feedback',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Feedback_OrderID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Feedback" ALTER COLUMN "OrderID" SET NOT NULL;ALTER TABLE "Feedback"  ADD FOREIGN KEY ("OrderID") REFERENCES "Orders" ("OrderID") ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: insert or update on table "Feedback" violates foreign key constraint "Feedback_OrderID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (OrderID)=(27) is not present in table "Orders".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Feedback',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Feedback_OrderID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Feedback" ALTER COLUMN "OrderID" SET NOT NULL;ALTER TABLE "Feedback"  ADD FOREIGN KEY ("OrderID") REFERENCES "Orders" ("OrderID") ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "Feedback" ALTER COLUMN "OrderID" SET NOT NULL;ALTER TABLE "Feedback"  ADD FOREIGN KEY ("OrderID") REFERENCES "Orders" ("OrderID") ON DELETE CASCADE ON UPDATE CASCADE;',
+    parameters: {},
+    table: 'Feedback',
+    fields: null,
+    value: undefined,
+    index: 'Feedback_OrderID_fkey',
+    reltype: undefined
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async Feedback.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-24T15:42:35.417] [ERROR] error - Unhandled Promise Rejection: {
+  reason: Error
+      at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+      at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Feedback.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)
+      at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9) {
+    name: 'SequelizeForeignKeyConstraintError',
+    parent: error: insert or update on table "Feedback" violates foreign key constraint "Feedback_OrderItemID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 272,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (OrderItemID)=(30) is not present in table "OrderItems".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Feedback',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Feedback_OrderItemID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Feedback" ALTER COLUMN "OrderItemID" SET NOT NULL;ALTER TABLE "Feedback"  ADD FOREIGN KEY ("OrderItemID") REFERENCES "OrderItems" ("OrderItemID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: error: insert or update on table "Feedback" violates foreign key constraint "Feedback_OrderItemID_fkey"
+        at Parser.parseErrorMessage (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:283:98)
+        at Parser.handlePacket (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:122:29)
+        at Parser.parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/parser.js:35:38)
+        at TLSSocket.<anonymous> (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/pg-protocol/dist/index.js:11:42)
+        at TLSSocket.emit (node:events:519:28)
+        at addChunk (node:internal/streams/readable:559:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+        at Readable.push (node:internal/streams/readable:390:5)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+      length: 272,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (OrderItemID)=(30) is not present in table "OrderItems".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'Feedback',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'Feedback_OrderItemID_fkey',
+      file: 'ri_triggers.c',
+      line: '2608',
+      routine: 'ri_ReportViolation',
+      sql: 'ALTER TABLE "Feedback" ALTER COLUMN "OrderItemID" SET NOT NULL;ALTER TABLE "Feedback"  ADD FOREIGN KEY ("OrderItemID") REFERENCES "OrderItems" ("OrderItemID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE "Feedback" ALTER COLUMN "OrderItemID" SET NOT NULL;ALTER TABLE "Feedback"  ADD FOREIGN KEY ("OrderItemID") REFERENCES "OrderItems" ("OrderItemID") ON DELETE NO ACTION ON UPDATE CASCADE;',
+    parameters: {},
+    table: 'Feedback',
+    fields: null,
+    value: undefined,
+    index: 'Feedback_OrderItemID_fkey',
+    reltype: undefined
+  },
+  stack: 'Error\n' +
+    '    at Query.run (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:315:28\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async Feedback.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/model.js:984:11)\n' +
+    '    at async Sequelize.sync (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/sequelize/lib/sequelize.js:377:9)'
+}
+[2025-01-24T16:07:12.573] [ERROR] error - Error occurred: {
+  error: 'Unexpected end of JSON input',
+  stack: 'SyntaxError: Unexpected end of JSON input\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at createStrictSyntaxError (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/body-parser/lib/types/json.js:169:10)\n' +
+    '    at parse (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/body-parser/lib/types/json.js:86:15)\n' +
+    '    at /home/vinay/Ecommerce-Electro-BackEnd/node_modules/body-parser/lib/read.js:128:18\n' +
+    '    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n' +
+    '    at invokeCallback (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/raw-body/index.js:238:16)\n' +
+    '    at done (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/raw-body/index.js:227:7)\n' +
+    '    at IncomingMessage.onEnd (/home/vinay/Ecommerce-Electro-BackEnd/node_modules/raw-body/index.js:287:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)',
+  path: '/api/getAllAddresses',
+  method: 'GET',
+  body: {},
+  params: {},
+  query: {},
+  userId: 'anonymous'
+}

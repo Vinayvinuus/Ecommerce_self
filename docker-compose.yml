@@ -1,0 +1,85 @@
+# # docker-compose.yml
+# version: '3'
+
+# services:
+#   app:
+#     build: .
+#     ports:
+#       - "3050:3050"
+#     volumes:
+#       - uploads_data:/imlystudios/uploads
+#     environment:
+#       - NODE_ENV=production
+
+# volumes:
+#   uploads_data:
+#     driver: local
+#     driver_opts:
+#       o: bind
+#       device: /imlystudios/uploads
+
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3050:3050"
+    volumes:
+      - uploads_data:/imlystudios/uploads
+      - logs_data:/app/logs
+    environment:
+      - NODE_ENV=production
+    networks:
+      - elk-network
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - elk-network
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.17.0
+    container_name: logstash
+    volumes:
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - logs_data:/logs
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk-network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.0
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk-network
+
+volumes:
+  uploads_data:
+    driver: local
+    driver_opts:
+      o: bind
+      device: /imlystudios/uploads
+  logs_data:
+    driver: local
+  elasticsearch_data:
+    driver: local
+
+networks:
+  elk-network:
+    driver: bridge
